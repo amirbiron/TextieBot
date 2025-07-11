@@ -14,8 +14,7 @@ logger = logging.getLogger(__name__)
 TOKEN = os.getenv("TELEGRAM_TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("👋 ברוך הבא לבוט TextieBot!
-שלח לי תמונה עם טקסט ואחזיר לך את הטקסט המזוהה + תרגום.")
+    await update.message.reply_text("👋 ברוך הבא לבוט TextieBot!\nשלח לי תמונה עם טקסט ואחזיר לך את הטקסט המזוהה + תרגום.")
 
 async def photo_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     photo_file = await update.message.photo[-1].get_file()
