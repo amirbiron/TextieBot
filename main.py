@@ -56,7 +56,7 @@ class DummyHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.end_headers()
-        self.wfile.write(b"✅ TextieBot is running")
+        self.wfile.write("✅ TextieBot is running".encode('utf-8'))
 
 def run_dummy_server():
     port = int(os.environ.get("PORT", 10000))
