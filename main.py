@@ -31,17 +31,12 @@ async def photo_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except:
         lang = 'unknown'
 
-    # תרגום
     if lang == 'he':
         translation = GoogleTranslator(source='auto', target='en').translate(text)
     else:
         translation = GoogleTranslator(source='auto', target='he').translate(text)
 
-    await update.message.reply_text(f"📝 הטקסט שזיהיתי:
-{text}
-
-🌍 תרגום:
-{translation}")
+    await update.message.reply_text(f"📝 הטקסט שזיהיתי:\n{text}\n\n🌍 תרגום:\n{translation}")
 
 def main():
     app = Application.builder().token(TOKEN).build()
