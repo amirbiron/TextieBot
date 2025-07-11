@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: textiebot
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: "python main.py"
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false

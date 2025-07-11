@@ -1,0 +1,5 @@
+python-telegram-bot==20.0
+pillow
+pytesseract
+deep-translator
+langdetect
